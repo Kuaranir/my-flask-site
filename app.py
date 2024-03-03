@@ -14,6 +14,11 @@ def page_not_found():
     return render_template('404page.html'), 404
 
 
+@app.errorhandler(500)
+def page_not_found():
+    return render_template('404page.html'), 500
+
+
 @app.route('/go')
 def go():
     return render_template('404page.html')
